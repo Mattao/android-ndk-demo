@@ -38,6 +38,6 @@ JNIEXPORT jstring JNICALL Java_com_matao_ndk_MainActivity_get(JNIEnv *env, jobje
 JNIEXPORT void JNICALL Java_com_matao_ndk_MainActivity_set(JNIEnv *env, jobject thiz, jstring string){
     LOGD("invoke set in c++\n");
     char* str = (char*)env->GetStringUTFChars(string, NULL);
-    printf("%s\n", str);
+    LOGD("%s\n", str);
     env->ReleaseStringUTFChars(string, str);
 }
